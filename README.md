@@ -16,7 +16,7 @@ Build image with `build.sh`
 Run Docker container with image `nginx-rtmp-raspi` and ports 8080 and 1935 published.
 
 ```
-docker run -d --name nginx-rtmp -P 8080:8080 -P 1935:1935 nginx-rtmp-raspi
+docker run -d --name nginx-rtmp -p 8080:8080 -p 1935:1935 nginx-rtmp-raspi
 ```
 
 Run the `ffmpeg` service on the host to forward video to nginx. Currently in as an upstart service, but easy to update for systemd or other process manager.
