@@ -21,7 +21,7 @@ RUN tar xf nginx-1.15.6.tar.gz
 RUN wget -q https://github.com/arut/nginx-rtmp-module/archive/v1.2.1.tar.gz
 RUN tar xf v1.2.1.tar.gz
 
-RUN wget -q ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.42.tar.gz
+COPY res/pcre-8.42.tar.gz pcre-8.42.tar.gz
 RUN tar -zxf pcre-8.42.tar.gz
 
 WORKDIR /src/nginx-1.15.6
